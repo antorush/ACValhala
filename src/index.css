@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme{
+--font-openSans:"Open Sans", sans-serif;
+--font-Bebas:"Bebas Neue", sans-serif;
+--color-primary:#fff;
+--color-btnColor:#3DB8A5;
+--color-btnColorLight:#9EDAD1;
+--color-textBtn:#1A1917;
+--text-18px:18px;
+--color-bg:#080A0B;
+----breakpoint-laptop:1600px;
+
+}
+
+
+@layer base{
+  *,*::before, *::after{
+    @apply box-border m-0 p-0;
+  }
+
+  h1,h2,h3,h4,h5{
+    @apply m-0 p-0
+  }
+  ul{
+    @apply m-0 p-0
+  }
+
+  body{
+    @apply w-full h-full overflow-x-hidden p-0 m-0 bg-bg text-primary font-openSans scroll-smooth;
+  } 
+}
+
+@layer components{
+  .flexBetween{
+    @apply flex justify-between items-center;
+  }
+  .flexCenter{
+    @apply flex justify-center items-center;
+  }
+    .headerItem{
+        @apply uppercase text-primary text-18px tracking-wider font-bold
+    }
+
+    .headingH1{
+      @apply font-Bebas text-[100px] tracking-widest font-normal leading-24 text-primary;
+    }
+    .headingH3{
+      @apply font-Bebas text-3xl tracking-wider font-normal text-primary;
+    }
+    .headingH2{
+      @apply font-Bebas text-[50px] tracking-wider font-normal text-btnColor
+    }
+    .headingH4{
+       @apply font-Bebas text-2xl tracking-wider font-normal text-btnColor
+    }
+}
